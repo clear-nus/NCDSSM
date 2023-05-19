@@ -1,0 +1,43 @@
+experiment: low-dimensional
+model: NCDSSMLL
+dataset: climate
+data_fold: 0
+exp_root_dir: ./results/{model}/{dataset}/{timestamp}/
+train_batch_size: 100
+test_batch_size: 112
+learning_rate: 1.e-2
+weight_decay: 1.e-4
+lr_decay_rate: 0.9
+lr_decay_steps: 100
+ctkf_params_warmup_steps: 0
+max_grad_norm: 100.0
+num_steps: 200
+log_steps: 50
+save_steps: 50
+device: cpu  # Which device to use, e.g., cpu, cuda:0, cuda:1, ...
+z_dim: 10
+y_dim: 5
+u_dim: 0
+aux_dim: 5
+K: 10
+# NOTE: concat_mask controls inference and emission networks.
+# When concat_mask is False, these are set to f(x) = x.
+# Only concat_mask=False is correctly implemented.
+concat_mask: false
+emission_mlp_units: 64
+emission_hidden_layers: 1
+emission_nonlinearity: softplus
+emission_tied_cov: true
+emission_trainable_cov: false
+inference_mlp_units: 64
+inference_nonlinearity: softplus
+inference_tied_cov: false
+inference_trainable_cov: false
+alpha_mlp_units: 64
+alpha_hidden_layers: 1
+alpha_nonlinearity: softplus
+fixed_H: false
+num_forecast: 50
+num_plots: 5
+integration_step_size: 0.1
+integration_method: euler
