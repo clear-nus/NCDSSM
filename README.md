@@ -78,7 +78,14 @@ python train_pymunk.py --config configs/box_ncdssmll.yaml
 
 ### Evaluation
 
-Once trained, models can be evaluated on the test set using the `eval_pymunk.py` and `eval_ts.py`. Alternatively, you can download our pretrained checkpoints from this repository's Releases and place it in `./checkpoints/`.
+Once trained, models can be evaluated on the test set using the `eval_pymunk.py` and `eval_ts.py`. Alternatively, you may download our pretrained checkpoints from this repository's Releases and place it in `./checkpoints/`.
+```sh
+# Download pretrained checkpoint from Releases
+wget https://github.com/clear-nus/NCDSSM/releases/download/v0.0.1/checkpoints.tar.gz \
+  && tar -xzf checkpoints.tar.gz \
+  && rm checkpoints.tar.gz
+```
+
 ```sh
 # Evaluate NCDSSM-NL on Damped Pendulum with 30% missing
 python eval_ts.py --ckpt checkpoints/damped_pendulum_0.3_ncdssmnl.pt --smooth
