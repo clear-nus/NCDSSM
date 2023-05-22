@@ -28,8 +28,8 @@ conda activate ncdssm
 ```
 * Clone this repo and install the package.
 ```sh
-# Install package with all optional dependencies for plotting and Pymunk experiments
-pip install --editable ".[all]"
+# Install package with all optional dependencies for running experiments
+pip install --editable ".[exp]"
 ```
 
 ## Usage
