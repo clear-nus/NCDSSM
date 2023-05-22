@@ -7,9 +7,15 @@ core_requires = [
     "tqdm",
     "pyyaml",
 ]
-plot_requires = ["matplotlib", "seaborn", "torchvision~=0.14"]
-pymunk_requires = ["pygame", "pymunk~=5.6.0", "POT~=0.9.0"]
-all_requires = plot_requires + pymunk_requires
+exp_requires = [
+    "matplotlib",
+    "seaborn",
+    "torchvision~=0.14",
+    "scikit-learn",
+    "pygame",
+    "pymunk~=5.6.0",
+    "POT~=0.9.0"
+]
 
 setup(
     name="ncdssm",
@@ -18,9 +24,7 @@ setup(
     version="0.0.1",
     install_requires=core_requires,
     extras_require={
-        "plot": plot_requires,
-        "pymunk": pymunk_requires,
-        "all": all_requires,
+        "exp": exp_requires,
     },
     packages=find_packages(where="src"),
     package_dir={"": "src"},
