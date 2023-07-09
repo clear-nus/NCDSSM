@@ -78,7 +78,7 @@ python train_pymunk.py --config configs/box_ncdssmll.yaml
 
 ### Evaluation
 
-Once trained, models can be evaluated on the test set using the `eval_pymunk.py` and `eval_ts.py`. Alternatively, you may download our pretrained checkpoints from this repository's Releases and place them in `./checkpoints/`.
+Once trained, models can be evaluated on the test set using the `eval_pymunk.py` and `eval_ts.py`. Alternatively, you may download our pretrained checkpoints from this repository's Releases or from [:hugs: hugging face](https://huggingface.co/abdulfatir/NCDSSM) and place them in `./checkpoints/`.
 ```sh
 # Download pretrained checkpoint from Releases
 wget https://github.com/clear-nus/NCDSSM/releases/download/v0.0.1/checkpoints.tar.gz \
